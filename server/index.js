@@ -140,7 +140,7 @@ app.get('/urls/:collection', function (request, response) {
 	  /* End of Create new room with the selected Deck */
 });
 
-app.get('/collection', function (request, response) {
+app.get('/collections', function (request, response) {
 	/* Create new room with the selected Deck */
 
 	authorize(gCredentials, function(auth){
