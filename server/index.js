@@ -118,7 +118,7 @@ app.get('/urls/:collection', function (request, response) {
 
 		sheets.spreadsheets.values.get({
 		  spreadsheetId: spreadsheetId,
-		  range: request.params.collection + '!A1:B',
+		  range: request.params.collection + '!A2:B',
 		}, (err, res) => {
 		  if (err) return console.log('The API returned an error: ' + err);
 		  const rows = res.data.values;
