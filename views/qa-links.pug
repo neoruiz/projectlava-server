@@ -1,0 +1,30 @@
+extends template.pug
+
+block append stylesheets
+    link(rel="stylesheet", type="text/css", href="css/timesheet-widget.css")
+
+block content
+    
+    #qa-links.container-xl
+        .card-content
+            .row.mb-3
+                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Collection:
+                .col-sm-10
+                    select#facility-selector.form-select.form-control-sm(ref='collections' v-on:change="updateList()")
+                        each collection in (COLLECTIONS || [])
+                            option(value=collection)= collection
+        .table-responsive.mt-1
+            table
+                thead
+                    tr
+                        th Name
+                        th Name
+                tbody
+                    tr(v-for='(item, key, index) in qaLinks')
+                        td
+                            input(type='checkbox')
+                        td(v-on:click="openUrl('" + REFERRAL + "' + item.url)")
+                            | {{ item.name }}
+
+block append scripts
+    script(src='js/qa-links.js')

@@ -1,0 +1,139 @@
+#data-entry-table {
+  overflow: hidden;
+  background: white; }
+
+table.zui-table {
+  border: none;
+  border-right: solid 1px #DDEFEF;
+  border-collapse: separate;
+  border-spacing: 0;
+  font: normal 13px Arial, sans-serif;
+  width: 1000px;
+  table-layout: auto; }
+
+.zui-table thead th {
+  background-color: #DDEFEF;
+  border: none;
+  color: #336B6B;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff;
+  white-space: nowrap; }
+
+.zui-table thead th.zui-sticky-col {
+  text-align: left; }
+
+.zui-table tbody td {
+  border-bottom: solid 1px #DDEFEF;
+  color: #333;
+  padding: 10px;
+  text-shadow: 1px 1px 1px #fff;
+  white-space: nowrap; }
+
+.zui-wrapper {
+  position: relative; }
+
+.zui-scroller {
+  scroll-behavior: smooth;
+  margin-left: 161px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: calc(100% - 160px); }
+
+.zui-table .zui-sticky-col {
+  border-left: solid 1px #DDEFEF;
+  border-right: solid 1px #DDEFEF;
+  left: 0;
+  position: absolute;
+  top: auto;
+  width: 160px; }
+  .zui-table .zui-sticky-col a {
+    text-decoration: none; }
+
+td.zui-sticky-col {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  background-color: #f8fbf9; }
+
+.zui-column-header {
+  min-width: calc(100vw - 169px - 1rem); }
+
+.hour-box-container {
+  padding: 0 !important;
+  border-right: solid 1px #DDEFEF;
+  border-left: none !important; }
+
+.hour-box {
+  height: 36px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  font-weight: bold;
+  color: #4d4d4d;
+  font-size: 1.5rem; }
+
+.hour-box-dates {
+  float: left;
+  width: 100%;
+  text-align: center; }
+
+.overtime-display {
+  font-weight: 100; }
+
+.hour-box.hour-box--overtime {
+  background-color: #d2dcf2; }
+
+@media (max-width: 570px) {
+  table.zui-table {
+    width: 100%; }
+  .zui-table thead th {
+    width: calc(100vw - 189px); }
+  .zui-table tbody td,
+  .hour-box {
+    height: 50px; } }
+
+html {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */ }
+
+.approve-timesheet {
+  float: right;
+  color: #373737;
+  background: #dedede;
+  padding: .125rem; }
+
+.time-entry-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between; }
+  .time-entry-actions .btn-link {
+    padding-left: 0;
+    padding-right: 0; }
+
+#addEmployeeContainer {
+  margin-top: 1rem; }
+
+.week-navigator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .5rem; }
+  .week-navigator .week-navigator--control {
+    padding: .25rem; }
+  .week-navigator .week-navigator--display {
+    padding: 0 1rem; }

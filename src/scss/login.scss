@@ -1,0 +1,36 @@
+.login-widget {
+    width: calc(100% - 1rem);
+    max-width: 350px;
+    margin: 10rem auto 0;
+    background: white;
+    padding: 3rem 1rem 1rem;
+    position: relative;
+
+    .logo {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 82px;
+        top: -40px;
+        background: white;
+        border-radius: 5rem;
+        padding: 1rem;
+        border: solid 4px #f5f5f5;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        a {
+            margin-top: .5rem;
+        }
+    }
+}
