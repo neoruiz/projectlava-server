@@ -23,7 +23,7 @@ block content
                     tr(v-for='(item, key, index) in qaLinks')
                         td
                             input(type='checkbox')
-                        td(v-on:click="openUrl('" + REFERRAL + "' + item.url)")
+                        td(v-on:click="openUrl('" + REFERRAL + "/' + item.url)")
                             | {{ item.name }}
 
 block append scripts
