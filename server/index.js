@@ -102,9 +102,9 @@ app.get('/', function (request, response) {
 		}, (err, res) => {
 			if (err) return console.log('The API returned an error: ' + err);
 			response.render('qa-links', {
-				REFERRAL : request.query.referral || '',
+				REFERRAL : request.query.referrer || '',
 				COLLECTIONS : res.data.sheets
-					.filter(sheet => ['Config'].indexOf(sheet.properties.title) < 0)
+					.filter(sheet => ['Apps', 'Config'].indexOf(sheet.properties.title) < 0)
 					.map(sheet => sheet.properties.title)
 			});
 		});
