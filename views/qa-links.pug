@@ -29,5 +29,9 @@ block content
                         td.collection-name.link(v-on:click="openUrl('" + REFERRAL + "/' + item.url)")
                             | {{ item.name }}
 
+        .row.spreadsheet-link
+            a(href='https://docs.google.com/spreadsheets/d/1iwRoeADvmNZ-6gdFQDIqt4f_4SBJL0uBmLLJZt4oyO4/edit#gid=1659593592')
+                | Spreadsheet Configs
+
 block append scripts
     script(src='js/qa-links.js')

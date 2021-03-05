@@ -53,3 +53,7 @@ body {
 .link:hover {
   cursor: pointer;
   text-decoration: underline; }
+
+.spreadsheet-link {
+  text-align: center;
+  margin-top: 5rem; }
