@@ -32,97 +32,41 @@ footer {
 
 body {
     margin-top: 60px;
-    background: #f5f5f5;
     font-family: 'Roboto', sans-serif;
     letter-spacing: .25px;
+    background-color: #252528;
+    color: white;
 }
 
-/* pending approvals */
-.pending-label-count {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 300;
+.home-logo,
+.project-name {
+    max-width: 20rem;
+    display: block;
+    margin: 0 auto;
 }
 
-.pending-card {
-    margin: 0 auto 1.5rem;
-    width: calc(100% - 1rem);
-    border-top: solid 5px $brand-primary;
-    box-shadow: 0px 0px 3px rgba(0,0,0,.25);
-
-    .card-title {
-        font-weight: bold;
-        letter-spacing: .5px;
-        margin-bottom: 0;
-    }
-
-    .pending-card__date-range {
-        font-size: .85rem;
-
-        .bi {
-            margin-right: .5rem;
-        }
-    }
-
-    .card-text {
-        margin-top: 1rem;
-    }
-}
-
-.pending-card__actions {
+.collection-selector {
     display: flex;
-    justify-content: flex-end;
-
-    .btn-outline-primary {
-        margin-left: .5rem;
-    }
-
-    .show-more {
-        margin-right: auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
+    align-items: center;
 }
 
-.pending-details {
-    list-style: none;
-    padding: 0;
-
-    .pending-details__value {
-        font-weight: 100;
-    }
+.collection-name {
+    padding-left: 1rem;
 }
 
-.employee-details {
-    list-style: none;
-    padding-left: 0;
-    width: 100%;
-    margin-bottom: 1rem;
-
-    .pending-details__value {
-        font-weight: 100;
-    }
-
-    .bi {
-        margin-right: .5rem;
-    }
+.project-name {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.managers-comment {
-    margin-bottom: 1.5rem;
+.links-container {
+    max-width: 30rem;
+    margin: 0 auto;
 }
 
-.home-actions {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-
-    a {
-        margin-bottom: .5rem;
-    }
-
-    .btn-danger {
-        margin-top: 5rem;
+.link {
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 }
-

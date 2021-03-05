@@ -14,11 +14,9 @@ html(lang='en')
         title
     body
         block header
-            a.header(href="/")
-                .logo-container
-                    img.home-logo(src='/images/home-logo.png')
-                    span
-                        | Project Lava
+            img.home-logo(src='/images/dotdash-logo-white.svg')
+            span.project-name
+                | Project Lava
         block content
         block libraries
             script(src='https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js')

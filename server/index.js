@@ -159,6 +159,37 @@ app.get('/collections', function (request, response) {
 	  /* End of Create new room with the selected Deck */
 });
 
+
+app.get('/verticals', function (request, response) {
+	/* Create new room with the selected Deck */
+	authorize(gCredentials, function(auth){
+		const sheets = google.sheets({version: 'v4', auth});
+
+		sheets.spreadsheets.values.get({
+		  spreadsheetId: spreadsheetId,
+		  range: 'Apps!A2:B',
+		}, (err, res) => {
+		  if (err) return console.log('The API returned an error: ' + err);
+		  const rows = res.data.values;
+		  if (rows.length) {
+			response.send({ 
+				'results': rows.map((row, index) => {
+								return {
+									'name' : row[0] ? row[0].trim() : '',
+									'url': row[1] ? row[1].trim() : ''
+								}
+							})
+			});
+		  } else {
+			console.log('No data found.');
+		  }
+		});
+
+	  });
+	  /* End of Create new room with the selected Deck */
+});
+
+
 app.use(express.static('public'));
 const server = http.createServer(app);
 

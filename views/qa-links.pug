@@ -6,24 +6,27 @@ block append stylesheets
 block content
     
     #qa-links.container-xl
-        .card-content
-            .row.mb-3
+        .card-content.links-container
+            .row.mb-3.collection-selector
                 label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Collection:
                 .col-sm-10
                     select#facility-selector.form-select.form-control-sm(ref='collections' v-on:change="updateList()")
                         each collection in (COLLECTIONS || [])
                             option(value=collection)= collection
-        .table-responsive.mt-1
+        .table-responsive.mt-1.links-container
             table
                 thead
                     tr
-                        th Name
-                        th Name
+                        th 
+                            input(type='checkbox' v-model="checkAll")
+                        th.collection-name Name
+                            span.link(v-on:click="openAll('" + REFERRAL + "/')")
+                                |  (open checked)
                 tbody
                     tr(v-for='(item, key, index) in qaLinks')
                         td
-                            input(type='checkbox')
-                        td(v-on:click="openUrl('" + REFERRAL + "/' + item.url)")
+                            input(type='checkbox' v-model="item.checked")
+                        td.collection-name.link(v-on:click="openUrl('" + REFERRAL + "/' + item.url)")
                             | {{ item.name }}
 
 block append scripts
