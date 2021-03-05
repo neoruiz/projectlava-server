@@ -132,7 +132,9 @@ app.get('/urls/:collection', function (request, response) {
 							})
 			});
 		  } else {
-			console.log('No data found.');
+			response.send({ 
+				'results': []
+			});
 		  }
 		});
 
